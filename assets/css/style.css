@@ -1,0 +1,19 @@
+
+.panel-format {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.row-margin {
+    margin-bottom: 15px;
+}
+
+.panel-content {
+    text-align: left;
+    padding: 15px 30px 5px 30px;
+    color: #31708f;
+}
+
+.header-color {
+    color: #31708f;  
+}

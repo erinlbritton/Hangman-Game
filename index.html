@@ -4,17 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Hangman Game</title>
 </head>
 <body>
-    <div id="game">
-    Press any key to start!             
-    </div>    
+        <div class="jumbotron">
+            <center>
+                <div id="game">
+                <h1><div class="header-color">Press any key to play!</div></h1>         
+                </div>  
+            </center>
+            
+        </div>    
 </body>
 <script>
    
     var words = ["goku", "vegeta", "gohan", "frieza", "piccolo", "krillin"];
-    var lose = 5;
+    var lose = 10;
     var validGuesses = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
     var letter;
     var allGuesses = [];
@@ -91,25 +98,53 @@
         if ((validGuesses.indexOf(letter) !== -1) && (allGuesses.indexOf(letter) === -1) && (correctGuesses.length !== win) && (incorrectGuesses.length !== lose)) {
             logLetter(letter);
             endGame();            
-        }
+        }        
+    
+    var html =
 
-        var html =
-        '<h1>' + answerDisplay.join(" ") + '</h1>'
-        ; 
+        '<div class="row row-margin-sm row-margin">' +
+                '<div class="col-md-3"></div>' +
+                '<div class="col-md-6 header-color">' +
+                    '<h1>' + answerDisplay.join(" ") + '</h1>' +
+                '</div>' +
+        '</div>' +
+        '<div class="row row-margin-sm row-margin">' +
+                '<div class="col-md-3"></div>' +
+                '<div class="col-md-3">' +
+                    '<div class="panel panel-info">' +
+                        '<div class="panel-heading panel-format">Set Stats</div>' +
+                        '<div class="panel-body panel-content">' +
+                            '<p>Wins: ' + globalWins + '</p>' +
+                            '<p>Losses: ' + globalLosses + '</p>' +
+                        '</div>' +
+                    '</div>' +
+                '</div>' +
+                '<div class="col-md-3">' +
+                    '<div class="panel panel-info">' +
+                        '<div class="panel-heading panel-format">Match Stats</div>' +
+                        '<div class="panel-body panel-content">' +
+                            '<p>Letters Guessed: ' + allGuesses.join(", ") + '</p>' +
+                            '<p>Chances Left: ' + (lose-incorrectGuesses.length) + '</p>' +
+                        '</div>' +
+                    '</div>' +
+                '</div>' +
+        '</div>' 
+    ;
+    
         document.querySelector("#game").innerHTML = html;   
 
-        // console.log("Letter: " + letter);
-        // console.log("All Guesses: " + allGuesses);
-        // console.log("Correct Guesses: " + correctGuesses);
-        // console.log("Incorrect Guesses: " + incorrectGuesses);
-        // console.log("Answer has " + win + " letters");
-        // console.log("Correct Guesses Total: " + correctGuesses.length);
-        // console.log("Incorrect Guesses Total: " + incorrectGuesses.length);
-        // console.log("Guesses Total: " + allGuesses.length);
-        // console.log("WINS: " + globalWins);
-        // console.log("LOSSES: " + globalLosses);
-        // console.log("-------------------");    
-    }
+        console.log("Letter: " + letter);
+        console.log("All Guesses: " + allGuesses);
+        console.log("Correct Guesses: " + correctGuesses);
+        console.log("Incorrect Guesses: " + incorrectGuesses);
+        console.log("Answer has " + win + " letters");
+        console.log("Correct Guesses Total: " + correctGuesses.length);
+        console.log("Incorrect Guesses Total: " + incorrectGuesses.length);
+        console.log("Guesses Total: " + allGuesses.length);
+        console.log("WINS: " + globalWins);
+        console.log("LOSSES: " + globalLosses);
+        console.log("-------------------");    
+    };
 
 </script>
 </html>
