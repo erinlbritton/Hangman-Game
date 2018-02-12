@@ -64,6 +64,11 @@ function winLose() {
         if (incorrectGuesses.length === lose) {
             alert("Sorry, try again!");
             globalLosses++;
+            for (var i = 0; i < answer.length; i++) {
+                if (answerDisplay[i] === "_") {
+                    answerDisplay[i] = answer[i];
+                }
+            }
         }    
 }
 
