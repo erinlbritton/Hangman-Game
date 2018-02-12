@@ -1,0 +1,93 @@
+.title-black {
+    background-color: black;
+    padding: 20px;
+}
+
+.title-blue {
+    background-color: #5349ce;
+    padding: 40px;
+}
+
+.title-padding {
+    padding-top: 40px;
+}
+
+.title-header-padding {
+    padding-bottom: 40px;
+}
+
+.title-body-padding {
+    padding-top: 80px;
+}
+.title-footer-padding {
+    padding-bottom: 300px;
+}
+
+/* 80s Typography styling from David Parker; available at https://codepen.io/boldfacedesign/pen/EoGgD */
+
+.street-machine {
+    position: relative;
+  }
+  
+  .street {
+    position: relative;
+    font-family: 'Candal', sans-serif;
+    font-size: 150px;
+    font-style: italic;
+    -webkit-text-stroke: 0.1px #eaa01b;
+    color: #fff;
+    text-shadow: -10px 10px 0px #eaa01b;
+    margin: 0;
+  }
+  
+  .windows .street {
+    -webkit-text-stroke: 4px #eaa01b;
+  }
+  
+  .street:before {
+    content: '';
+    position: absolute;
+    height: 4px;
+    width: 900px;
+    top: 83px;
+    left: 200px;
+    background: #eaa01b;
+    box-shadow: -8px 13px #eaa01b;
+  }
+  
+  .windows .street:before {
+    left: 55px;
+    width: 659px;
+  }
+  
+  .street:after {
+    content: '';
+    position: absolute;
+    height: 4px;
+    width: 900px;
+    top: 109px;
+    left: 190px;
+    background: #eaa01b;
+    box-shadow: -4px 13px #eaa01b;
+  }
+  
+  .machine {
+    position: absolute;
+    left: 250px;
+    top: 290px;
+    font-family: 'Mr Dafoe', cursive;
+    font-size: 150px;
+    transform:rotate(-15deg);
+    -ms-transform:rotate(-15deg); /* IE 9 */
+    -webkit-transform:rotate(-15deg); /* Safari and Chrome */
+    color: #b6312a;
+    margin: 0;
+    margin-top: -160px;
+    padding-left: 430px;
+    text-shadow: 1px 2px 0px #F9D2D2;
+  }
+  
+  .windows .machine {
+    margin-top: -200px;
+  }
+  

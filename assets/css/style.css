@@ -1,4 +1,16 @@
 
+.font-8bit {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 24px;
+    color: #64a4e4;
+}
+
+.font-8bit-sm {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 16px;
+    color: #64a4e4;
+}
+
 #panel-format {
     font-size: 24px;
     font-weight: bold;
@@ -198,4 +210,11 @@ body {
 	width: 184px;
 	height: 233px;
 }
+
+#div-inline {
+    display: inline;
+    padding-top: 10px;
+}
+
+
 
