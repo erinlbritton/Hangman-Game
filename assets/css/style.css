@@ -1,19 +1,201 @@
 
-.panel-format {
+#panel-format {
     font-size: 24px;
     font-weight: bold;
+    background-color: #00a800;
+    border-color: green;
+    color: white;
+}
+
+#panel {
+    border-color: green;
+    margin-bottom: 15px;
+}
+
+#jumbotron-color {
+    color: green;
 }
 
 .row-margin {
-    margin-bottom: 15px;
+    margin-top: 20px;
 }
 
 .panel-content {
     text-align: left;
+    font-size: 18px;
     padding: 15px 30px 5px 30px;
-    color: #31708f;
+    color: green;
+    font-weight: bold;
 }
 
-.header-color {
-    color: #31708f;  
+h1 {
+    font-size: 63px;
+    margin-top: 0px;
 }
+    
+.header-style {
+    color: green;
+    font-weight: bold;
+    margin-top: 56px;  
+    padding-bottom: 50px;
+}
+
+body {
+    background: url(../images/ring.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.col-background {
+    background-color: #eee;
+    opacity: 0.9;
+    border-radius: 4px;
+}
+
+.img-size {
+    width: 90%;
+    height: auto;
+}
+
+.mac0, .mac1, .mac2, .mac3, .mac4, .mac5, .mac6, .mac8, .mac9, .mac10, .mac7{
+    background: url(../images/sprites.png) no-repeat;
+    border-radius: 4px;
+}
+
+.mac0{
+	background-position: 0 0;
+	width: 270px;
+	height: 233px;
+}
+
+.mac1{
+	background-position: 0 -236px ;
+	width: 270px;
+	height: 233px;
+}
+
+.mac2{
+	background-position: 0 -471px ;
+	width: 270px;
+	height: 233px;
+}
+
+.mac3{
+	background-position: 0 -707px ;
+	width: 270px;
+	height: 233px;
+}
+
+.mac4{
+	background-position: 0 -944px ;
+	width: 270px;
+	height: 233px;
+}
+
+.mac5{
+	background-position: 0 -1180px ;
+	width: 270px;
+	height: 233px;
+}
+
+.mac6{
+	background-position: 0 -1418px ;
+	width: 270px;
+	height: 233px;
+}
+
+.mac8{
+	background-position: 0 -1894px ;
+	width: 270px;
+	height: 233px;
+}
+
+.mac9{
+	background-position: 0 -2130px ;
+	width: 270px;
+	height: 233px;
+}
+
+.mac10{
+	background-position: 0 -2367px ;
+	width: 270px;
+	height: 233px;
+}
+
+.mac7{
+	background-position: 0 -1656px ;
+	width: 270px;
+	height: 233px;
+}
+
+.mario0, .mario1, .mario2, .mario3, .mario4, .mario5, .mario6, .mario7, .mario8, .mario9, .mario10{
+    background: url(../images/sprites2.png) no-repeat;
+    /* border-radius: 4px; */
+}
+
+.mario0{
+	background-position: -82px 0;
+	width: 102px;
+	height: 233px;
+}
+
+.mario1{
+	background-position: 0 -238px ;
+	width: 184px;
+	height: 233px;
+}
+
+.mario2{
+	background-position: 0 -475px ;
+	width: 184px;
+	height: 233px;
+}
+
+.mario3{
+	background-position: 0 -712px ;
+	width: 184px;
+	height: 233px;
+}
+
+.mario4{
+	background-position: 0 -948px ;
+	width: 184px;
+	height: 233px;
+}
+
+.mario5{
+	background-position: 0 -1184px ;
+	width: 184px;
+	height: 233px;
+}
+
+.mario6{
+	background-position: 0 -1420px ;
+	width: 184px;
+	height: 233px;
+}
+
+.mario7{
+	background-position: 0 -1656px ;
+	width: 184px;
+	height: 233px;
+}
+
+.mario8{
+	background-position: 0 -1892px ;
+	width: 184px;
+	height: 233px;
+}
+
+.mario9{
+	background-position: 0 -2128px ;
+	width: 184px;
+	height: 233px;
+}
+
+.mario10{
+	background-position: 0 -2367px ;
+	width: 184px;
+	height: 233px;
+}
+

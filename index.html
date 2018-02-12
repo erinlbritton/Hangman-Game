@@ -9,14 +9,16 @@
     <title>Hangman Game</title>
 </head>
 <body>
-        <div class="jumbotron">
+    <div class="background-img">
+        <div class="">
             <center>
                 <div id="game">
-                <h1><div class="header-color">Press any key to play!</div></h1>         
+                <h1><div class="header-color jumbotron row-margin" id="jumbotron-color">Press any key to play!</div></h1>         
                 </div>  
             </center>
             
-        </div>    
+        </div>
+    </div>    
 </body>
 <script>
    
@@ -27,7 +29,7 @@
     var allGuesses = [];
     var incorrectGuesses = [];
     var correctGuesses = [];
-    var answer = words[Math.floor(Math.random() * words.length)];
+    var answer = "ignoreFirstKey";
     var answerDisplay = [];
     for (var i = 0; i < answer.length; i++) {
         answerDisplay.push("_");
@@ -77,16 +79,14 @@
             }     
     }
 
-    function endGame() {
+    function winLose() {
             if (correctGuesses.length === win) {
-                alert("You win! The answer was " + answer + "!");
-                reset();
+                alert("You win!");
                 globalWins++;
             } 
 
             if (incorrectGuesses.length === lose) {
-                alert("Sorry, try again! The answer was " + answer + "!");
-                reset();
+                alert("Sorry, try again!");
                 globalLosses++;
             }    
     }
@@ -94,41 +94,52 @@
     document.onkeyup = function(event) {
         
         var letter = String.fromCharCode(event.which).toLowerCase();
-        
-        if ((validGuesses.indexOf(letter) !== -1) && (allGuesses.indexOf(letter) === -1) && (correctGuesses.length !== win) && (incorrectGuesses.length !== lose)) {
+        if (answer === "ignoreFirstKey") {
+            reset();
+        } else if ((validGuesses.indexOf(letter) !== -1) && 
+            (allGuesses.indexOf(letter) === -1) && 
+            (correctGuesses.length !== win) && 
+            (incorrectGuesses.length !== lose)) {
             logLetter(letter);
-            endGame();            
-        }        
+            winLose();           
+        }  else if ((correctGuesses.length === win) || 
+            (incorrectGuesses.length === lose)) {
+            reset(); 
+        }
+
     
     var html =
-
-        '<div class="row row-margin-sm row-margin">' +
-                '<div class="col-md-3"></div>' +
-                '<div class="col-md-6 header-color">' +
-                    '<h1>' + answerDisplay.join(" ") + '</h1>' +
+    '<div class="row row-margin-sm row-margin">' +
+        '<div class="col-md-3"><div class="mac' + incorrectGuesses.length + '"></div></div>' +
+        '<div class="col-md-6 col-background">' +
+                '<div class="row row-margin-sm">' +
+                        '<div class="col-md-12 header-style col-background">' +
+                            '<h1>' + answerDisplay.join(" ") + '</h1>' +
+                        '</div>' +
+                '</div>' +
+                '<div class="row row-margin-sm">' +
+                        '<div class="col-md-6 col-background">' +
+                            '<div class="panel panel-info" id="panel">' +
+                                '<div class="panel-heading" id="panel-format">Match Stats</div>' +
+                                '<div class="panel-body panel-content">' +
+                                    '<p>Wins: ' + globalWins + '</p>' +
+                                    '<p>Losses: ' + globalLosses + '</p>' +
+                                '</div>' +
+                            '</div>' +
+                        '</div>' +
+                        '<div class="col-md-6 col-background">' +
+                            '<div class="panel panel-info" id="panel">' +
+                                '<div class="panel-heading" id="panel-format">Round Stats</div>' +
+                                '<div class="panel-body panel-content">' +
+                                    '<p>Letters Guessed: ' + allGuesses.join(", ") + '</p>' +
+                                    '<p>Chances Left: ' + (lose-incorrectGuesses.length) + '</p>' +
+                                '</div>' +
+                            '</div>' +
+                        '</div>' +
                 '</div>' +
         '</div>' +
-        '<div class="row row-margin-sm row-margin">' +
-                '<div class="col-md-3"></div>' +
-                '<div class="col-md-3">' +
-                    '<div class="panel panel-info">' +
-                        '<div class="panel-heading panel-format">Set Stats</div>' +
-                        '<div class="panel-body panel-content">' +
-                            '<p>Wins: ' + globalWins + '</p>' +
-                            '<p>Losses: ' + globalLosses + '</p>' +
-                        '</div>' +
-                    '</div>' +
-                '</div>' +
-                '<div class="col-md-3">' +
-                    '<div class="panel panel-info">' +
-                        '<div class="panel-heading panel-format">Match Stats</div>' +
-                        '<div class="panel-body panel-content">' +
-                            '<p>Letters Guessed: ' + allGuesses.join(", ") + '</p>' +
-                            '<p>Chances Left: ' + (lose-incorrectGuesses.length) + '</p>' +
-                        '</div>' +
-                    '</div>' +
-                '</div>' +
-        '</div>' 
+        '<div class="col-md-3"><div class="mario' + incorrectGuesses.length + '"></div></div>' +
+    '</div>'
     ;
     
         document.querySelector("#game").innerHTML = html;   
