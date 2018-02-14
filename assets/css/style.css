@@ -212,7 +212,8 @@ body {
 }
 
 #div-inline {
-    display: inline;
+	display: inline-block;
+	vertical-align: top;
     padding-top: 10px;
 }
 
