@@ -32,13 +32,6 @@
     margin-top: 20px;
 }
 
-.btn-green {
-	background-color: #00a800;
-	border-color: green;
-	color: white;
-	font-weight: bold;
-}
-
 .panel-content {
     text-align: left;
     font-size: 18px;

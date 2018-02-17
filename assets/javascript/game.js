@@ -103,7 +103,7 @@ function doModal(heading, formContent) {
     html += formContent;
     html += '</div>';
     html += '<div class="modal-footer">';
-    html += '<button type="type" class="btn btn-green" data-dismiss="modal">Close</button>';
+    html += '<button type="type" class="btn btn-warning" data-dismiss="modal">Close</button>';
     html += '</div>';  // content
     html += '</div>';  // dialog
     html += '</div>';  // footer
